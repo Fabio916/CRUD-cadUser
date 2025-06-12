@@ -1,5 +1,7 @@
 package com.example.cadUser.resources;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,11 +19,11 @@ public class UserResource {
 	@Autowired
 	private UserService service;
 
-	/*@GetMapping
+	@GetMapping
 	public ResponseEntity<List<User>> findAll() {
 		List<User> list = service.findAll();
 		return ResponseEntity.ok().body(list);
-	}*/
+	}
 	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {

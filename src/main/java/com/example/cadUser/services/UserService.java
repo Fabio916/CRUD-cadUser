@@ -1,5 +1,6 @@
 package com.example.cadUser.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,10 @@ public class UserService {
 	public User findById(Long id) {
 		Optional<User> obj = userRepository.findById(id);
 		return obj.get();
+	}
+	
+	public List<User> findAll(){
+		return userRepository.findAll();
 	}
 	
 }
